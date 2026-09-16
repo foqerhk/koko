@@ -1,46 +1,88 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KoKo 隐私政策</title>
+  <title>KoKo Privacy Policy</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
     h1 { font-size: 1.6rem; } h2 { font-size: 1.15rem; margin-top: 1.8em; }
     .muted { color: #666; font-size: 0.9rem; }
+    .lang { margin: 1.5em 0; padding: 0.75em 1em; background: #f5f5f7; border-radius: 8px; }
+    hr { border: none; border-top: 1px solid #ddd; margin: 2.5em 0; }
   </style>
 </head>
 <body>
-  <h1>KoKo 隐私政策</h1>
-  <p class="muted">生效日期：2026-09-15 · 开发者：个人开发者（Apple ID 关联账号）</p>
+  <p class="lang"><a href="#en">English</a> · <a href="#zh">中文</a></p>
 
-  <p>KoKo 是一款在 iPhone 上通过 SSH 连接你自己的 Linux 服务器、操作 Cursor Agent CLI 的原生终端工具。我们重视你的隐私，说明如下。</p>
+  <section id="en">
+    <h1>KoKo Privacy Policy</h1>
+    <p class="muted">Effective date: 2026-09-15 · Developer: individual (Apple Developer Program)</p>
 
-  <h2>1. 我们收集哪些数据</h2>
-  <p>KoKo <strong>不运营自有账号系统</strong>，也不向我们的服务器上传你的内容。应用仅在你的设备本地保存：</p>
-  <ul>
-    <li>你添加的 SSH 主机配置（名称、地址、端口、用户名、项目路径）</li>
-    <li>SSH 密码或私钥（使用 iOS Keychain 安全存储）</li>
-    <li>主机指纹（TOFU）与会话元数据</li>
-    <li>终端 scrollback 历史（保存在本机，可手动清理）</li>
-  </ul>
+    <p>KoKo is a native iPhone terminal that connects over SSH to <em>your own</em> Linux server so you can operate Cursor Agent CLI. We take privacy seriously.</p>
 
-  <h2>2. 数据如何使用</h2>
-  <p>上述数据仅用于在本机发起 SSH 连接并显示终端。SSH 流量直接在你的 iPhone 与你指定的服务器之间传输，不经过 KoKo 开发者的中转服务器。</p>
+    <h2>1. What data we collect</h2>
+    <p>KoKo <strong>does not run its own account system</strong> and does not upload your content to our servers. The app only stores on your device:</p>
+    <ul>
+      <li>SSH host profiles you add (name, address, port, username, project paths)</li>
+      <li>SSH passwords or private keys (stored in the iOS Keychain)</li>
+      <li>Host key fingerprints (TOFU) and session metadata</li>
+      <li>Terminal scrollback history (local only; can be cleared manually)</li>
+    </ul>
 
-  <h2>3. 第三方服务</h2>
-  <p>KoKo 不集成广告 SDK、分析 SDK 或社交媒体 SDK。你在服务器上使用的 Cursor Agent / Cursor 账号受 Cursor 自身隐私政策约束，与本应用开发者无关。</p>
+    <h2>2. How data is used</h2>
+    <p>This data is used solely to open SSH connections and render the terminal on your device. SSH traffic goes directly between your iPhone and the server you specify — it does not pass through a KoKo-operated relay.</p>
 
-  <h2>4. 数据共享</h2>
-  <p>我们不会出售、出租或向第三方共享你的 SSH 凭据或终端内容。除非法律要求，否则不会披露你的本地配置。</p>
+    <h2>3. Third-party services</h2>
+    <p>KoKo does not integrate advertising, analytics, or social SDKs. Cursor Agent / Cursor accounts you use on your server are governed by Cursor’s own privacy policy and are unrelated to this app’s developer.</p>
 
-  <h2>5. 数据保留与删除</h2>
-  <p>所有数据保留在你的设备上。删除 App 或在系统设置中清除 App 数据即可移除。你也可在 App「设置」中清理 scrollback，并在「密钥 / 主机」中删除对应条目。</p>
+    <h2>4. Sharing</h2>
+    <p>We do not sell, rent, or share your SSH credentials or terminal content with third parties. We will not disclose local configuration except where required by law.</p>
 
-  <h2>6. 儿童隐私</h2>
-  <p>KoKo 面向开发者与运维人员，不以 13 岁以下儿童为对象。</p>
+    <h2>5. Retention and deletion</h2>
+    <p>All data stays on your device. Delete the app or clear its data in system settings to remove it. You can also clear scrollback in Settings and delete hosts/keys in the app.</p>
 
-  <h2>7. 联系我们</h2>
-  <p>如有隐私相关问题，请通过 App Store 应用页面的开发者联系方式，或邮件 <a href="mailto:ruier09@qq.com">ruier09@qq.com</a> 与我们联系。</p>
+    <h2>6. Children</h2>
+    <p>KoKo is not directed at children under 13. We do not knowingly collect children’s data.</p>
+
+    <h2>7. Contact</h2>
+    <p>Questions about this policy: use the support channel listed on the App Store listing / GitHub repository for this project.</p>
+  </section>
+
+  <hr />
+
+  <section id="zh" lang="zh-CN">
+    <h1>KoKo 隐私政策</h1>
+    <p class="muted">生效日期：2026-09-15 · 开发者：个人开发者（Apple Developer Program）</p>
+
+    <p>KoKo 是一款在 iPhone 上通过 SSH 连接你自己的 Linux 服务器、操作 Cursor Agent CLI 的原生终端工具。我们重视你的隐私，说明如下。</p>
+
+    <h2>1. 我们收集哪些数据</h2>
+    <p>KoKo <strong>不运营自有账号系统</strong>，也不向我们的服务器上传你的内容。应用仅在你的设备本地保存：</p>
+    <ul>
+      <li>你添加的 SSH 主机配置（名称、地址、端口、用户名、项目路径）</li>
+      <li>SSH 密码或私钥（使用 iOS Keychain 安全存储）</li>
+      <li>主机指纹（TOFU）与会话元数据</li>
+      <li>终端 scrollback 历史（保存在本机，可手动清理）</li>
+    </ul>
+
+    <h2>2. 数据如何使用</h2>
+    <p>上述数据仅用于在本机发起 SSH 连接并显示终端。SSH 流量直接在你的 iPhone 与你指定的服务器之间传输，不经过 KoKo 开发者的中转服务器。</p>
+
+    <h2>3. 第三方服务</h2>
+    <p>KoKo 不集成广告 SDK、分析 SDK 或社交媒体 SDK。你在服务器上使用的 Cursor Agent / Cursor 账号受 Cursor 自身隐私政策约束，与本应用开发者无关。</p>
+
+    <h2>4. 数据共享</h2>
+    <p>我们不会出售、出租或向第三方共享你的 SSH 凭据或终端内容。除非法律要求，否则不会披露你的本地配置。</p>
+
+    <h2>5. 数据保留与删除</h2>
+    <p>所有数据保留在你的设备上。删除 App 或在系统设置中清除 App 数据即可移除。你也可在 App「设置」中清理 scrollback，并在「密钥 / 主机」中删除对应条目。</p>
+
+    <h2>6. 儿童隐私</h2>
+    <p>KoKo 不面向 13 岁以下儿童，我们不会故意收集儿童数据。</p>
+
+    <h2>7. 联系</h2>
+    <p>如有隐私问题，请通过 App Store 页面或本项目 GitHub 仓库中的支持渠道联系。</p>
+  </section>
 </body>
 </html>
