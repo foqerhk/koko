@@ -1,15 +1,40 @@
-# KoKo App Store 元数据（准备稿）
+# KoKo App Store Metadata
 
-## 名称
-KoKo
+Primary locale: **English (U.S.)** · Secondary: Simplified Chinese
 
-## 副标题（30 字内）
-手机上的 Cursor Agent 终端
+## Name
+KoKo Ai - Intent Computing  
+*(short name “KoKo” is unavailable on the App Store)*
 
-## 宣传文本（170 字内）
-用 iPhone 直连服务器上的 Cursor Agent。真实 SSH 终端，支持 tmux 断线恢复，不是聊天机器人。
+## Subtitle (≤30 characters)
+**EN:** Cursor Agent on iPhone  
+**ZH:** 手机上的 Cursor Agent 终端
 
-## 描述
+## Promotional Text (≤170 characters)
+**EN:** SSH into your server and drive Cursor Agent from your iPhone. Real PTY terminal with tmux resume — not a chatbot.  
+**ZH:** 用 iPhone 直连服务器上的 Cursor Agent。真实 SSH 终端，支持 tmux 断线恢复，不是聊天机器人。
+
+## Description
+### English
+KoKo lets you operate Cursor Agent CLI on your Linux server from iPhone over SSH — with a real terminal experience.
+
+Features
+• Real SSH PTY terminal (colors, cursor, menus, y/n prompts)
+• tmux session resume after lock screen or network drops
+• Optional agent persist mode
+• Generate Ed25519 / ECDSA / RSA keys in-app; private keys stay in Keychain
+• Host key TOFU confirmation
+• Shortcut bar: Esc, Tab, Ctrl+J, arrows, Shift+Tab
+• Full local scrollback with manual clear
+• Detect Cursor login links — copy or open
+
+Who it's for
+Developers who need to keep working with Cursor Agent on the go.
+
+Requirements
+You need your own SSH-accessible Linux server with tmux and Cursor CLI (agent) installed. KoKo does not host Cursor accounts or provide a cloud relay.
+
+### 简体中文
 KoKo 让你在 iPhone 上通过 SSH 操作 Linux 服务器里的 Cursor Agent CLI，保留完整终端体验。
 
 【核心能力】
@@ -28,21 +53,21 @@ KoKo 让你在 iPhone 上通过 SSH 操作 Linux 服务器里的 Cursor Agent CL
 【注意】
 需自备可 SSH 的 Linux 服务器，并已安装 tmux 与 Cursor CLI（agent）。本 App 不代管 Cursor 账号，不提供云中转。
 
-## 关键词
-SSH,终端,Cursor,Agent,tmux,开发,运维,远程,命令行,PTY
+## Keywords
+**EN:** SSH,terminal,Cursor,Agent,tmux,developer,remote,PTY,CLI,DevOps  
+**ZH:** SSH,终端,Cursor,Agent,tmux,开发,运维,远程,命令行,PTY
 
-## 支持 URL（可暂用）
-https://github.com/
+## Support / Marketing URL
+https://github.com/foqerhk/koko
 
-## 营销 URL
-（可空）
+## Privacy Policy URL
+https://foqerhk.github.io/koko/privacy.html
 
-## 类别
-主：开发者工具
-副：工具
+## Category
+Primary: Developer Tools · Secondary: Utilities
 
-## 年龄分级
+## Age Rating
 4+
 
-## 版权
+## Copyright
 2026 KoKo
