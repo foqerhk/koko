@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KoKo Privacy Policy</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
+    h1 { font-size: 1.6rem; } h2 { font-size: 1.15rem; margin-top: 1.8em; }
+    .muted { color: #666; font-size: 0.9rem; }
+    .lang { margin: 1.5em 0; padding: 0.75em 1em; background: #f5f5f7; border-radius: 8px; }
+    hr { border: none; border-top: 1px solid #ddd; margin: 2.5em 0; }
+  </style>
+</head>
+<body>
+  <p class="lang"><a href="#en">English</a> · <a href="#zh">中文</a></p>
+
+  <section id="en">
+    <h1>KoKo Privacy Policy</h1>
+    <p class="muted">Effective date: 2026-09-20 · Developer: individual (Apple Developer Program)</p>
+
+    <p>KoKo is a native iPhone SSH terminal. You connect to <em>your own</em> Linux server to run AI coding agent CLIs — including Cursor Agent, Claude Code, OpenAI Codex CLI, and Google Gemini CLI. KoKo does not operate its own backend or account system.</p>
+
+    <h2>1. What data KoKo stores on your iPhone</h2>
+    <p>KoKo does <strong>not</strong> upload your SSH credentials, terminal output, or session content to servers operated by the KoKo developer. The app stores the following locally on your device:</p>
+    <ul>
+      <li><strong>SSH host profiles</strong> — name, address, port, username, project paths, and host key fingerprints (TOFU)</li>
+      <li><strong>SSH credentials</strong> — passwords or private keys, stored in the iOS Keychain (accessible only while the device is unlocked, on this device only)</li>
+      <li><strong>SSH key metadata</strong> — label, algorithm, and public key text (private keys stay in Keychain)</li>
+      <li><strong>Session metadata</strong> — display name, agent type, remote chat/session IDs, and timestamps (not full conversation transcripts)</li>
+      <li><strong>Terminal scrollback</strong> — raw PTY output saved under the app’s Application Support folder</li>
+      <li><strong>App preferences</strong> — UI language and terminal font size</li>
+    </ul>
+
+    <h2>2. How your data is used</h2>
+    <p>Local data is used only to:</p>
+    <ul>
+      <li>Open and maintain SSH connections to servers you configure</li>
+      <li>Render the terminal and restore scrollback</li>
+      <li>List, resume, and delete agent sessions on your server</li>
+      <li>Assist with agent CLI login flows (see Section 3)</li>
+    </ul>
+    <p>SSH traffic travels directly between your iPhone and the server you specify. It does <strong>not</strong> pass through a KoKo-operated relay or cloud service.</p>
+
+    <h2>3. Third-party services and your server</h2>
+    <p>KoKo does <strong>not</strong> integrate advertising, analytics, crash-reporting, or social SDKs.</p>
+    <p>When you use an agent on your server, that CLI and its accounts are separate from KoKo:</p>
+    <ul>
+      <li><strong>Cursor Agent</strong> — runs on your server; login may open Cursor’s website in Safari</li>
+      <li><strong>Claude Code</strong> — runs on your server; login may open Anthropic’s website in Safari</li>
+      <li><strong>OpenAI Codex CLI</strong> — runs on your server; device-auth login may open OpenAI’s website in Safari</li>
+      <li><strong>Google Gemini CLI</strong> — runs on your server; login may open Google’s website in Safari</li>
+    </ul>
+    <p>KoKo does not store Cursor, Anthropic, OpenAI, or Google account credentials. Those services are governed by their own privacy policies. Any API calls or data processing by an agent CLI happen on your server and with those providers — not with the KoKo developer.</p>
+    <p>If you choose to install a missing CLI, KoKo may run install commands <em>on your server</em> (for example via official install scripts or npm). That can cause your server to download software from third-party hosts such as cursor.com, claude.ai, chatgpt.com, or registry.npmjs.org.</p>
+    <p>During login or setup, KoKo may copy URLs or codes to the system clipboard, or open a login page in your browser, at your direction.</p>
+
+    <h2>4. Session sync and deletion</h2>
+    <p>When you refresh the session list, KoKo runs commands over SSH on your server to read agent metadata (for example under <code>~/.cursor</code>, <code>~/.claude</code>, <code>~/.codex</code>, or <code>~/.gemini</code>) and detect active GNU screen sessions. This metadata is merged into local session records on your iPhone. KoKo does not send this information to the developer.</p>
+    <p>When you delete a session in the app, KoKo stops the remote agent or screen session and removes related metadata on <strong>your server</strong>, then deletes the local session record and scrollback. Server-side deletion may be irreversible — back up important work on your server if needed.</p>
+
+    <h2>5. Public key setup</h2>
+    <p>If you use the in-app public key installer, KoKo connects with your existing SSH credentials, adds your public key to <code>~/.ssh/authorized_keys</code> on the server, and may attempt (with your password via sudo) to enable public-key authentication in SSH server configuration. Keys are sent only to the server you specify, not to KoKo’s developer.</p>
+
+    <h2>6. Sharing</h2>
+    <p>We do not sell, rent, or share your SSH credentials, terminal content, or local configuration with third parties. We will not disclose your data except where required by law.</p>
+
+    <h2>7. Retention and deletion</h2>
+    <p>Data on your iPhone remains until you remove it. You can delete hosts, keys, and sessions in the app; deleting a session also clears its local scrollback. Uninstalling the app or clearing its data in iOS Settings removes local profiles, Keychain entries, and scrollback files.</p>
+
+    <h2>8. Children</h2>
+    <p>KoKo is not directed at children under 13. We do not knowingly collect children’s data.</p>
+
+    <h2>9. Contact</h2>
+    <p>Questions about this policy: use the support channel listed on the App Store listing or the GitHub repository for this project.</p>
+  </section>
+
+  <hr />
+
+  <section id="zh" lang="zh-CN">
+    <h1>KoKo 隐私政策</h1>
+    <p class="muted">生效日期：2026-09-20 · 开发者：个人开发者（Apple Developer Program）</p>
+
+    <p>KoKo 是一款 iPhone 原生 SSH 终端。你通过 SSH 连接<strong>自己的</strong> Linux 服务器，运行 AI 编程 Agent 命令行工具，包括 Cursor Agent、Claude Code、OpenAI Codex CLI 与 Google Gemini CLI。KoKo 不运营自有后端或账号系统。</p>
+
+    <h2>1. KoKo 在 iPhone 上存储哪些数据</h2>
+    <p>KoKo <strong>不会</strong>将你的 SSH 凭据、终端输出或会话内容上传到 KoKo 开发者运营的服务器。应用仅在你的设备本地保存：</p>
+    <ul>
+      <li><strong>SSH 主机配置</strong> — 名称、地址、端口、用户名、项目路径，以及主机指纹（TOFU）</li>
+      <li><strong>SSH 凭据</strong> — 密码或私钥，保存在 iOS Keychain（仅在本机、设备解锁时可访问）</li>
+      <li><strong>SSH 密钥元数据</strong> — 标签、算法与公钥文本（私钥仅存于 Keychain）</li>
+      <li><strong>会话元数据</strong> — 显示名称、Agent 类型、远端 chat/session ID 与时间戳（不含完整对话正文）</li>
+      <li><strong>终端 scrollback</strong> — 原始 PTY 输出，保存在 App 的 Application Support 目录</li>
+      <li><strong>应用偏好</strong> — 界面语言与终端字号</li>
+    </ul>
+
+    <h2>2. 数据如何使用</h2>
+    <p>本地数据仅用于：</p>
+    <ul>
+      <li>建立并维持到你配置的服务器的 SSH 连接</li>
+      <li>显示终端并恢复 scrollback</li>
+      <li>在你服务器上列出、恢复或删除 Agent 会话</li>
+      <li>辅助 Agent CLI 登录流程（见第 3 节）</li>
+    </ul>
+    <p>SSH 流量直接在你的 iPhone 与你指定的服务器之间传输，<strong>不经过</strong> KoKo 开发者的中转或云服务。</p>
+
+    <h2>3. 第三方服务与你的服务器</h2>
+    <p>KoKo <strong>不集成</strong>广告、分析、崩溃上报或社交媒体 SDK。</p>
+    <p>你在服务器上使用的 Agent CLI 及其账号与 KoKo 相互独立：</p>
+    <ul>
+      <li><strong>Cursor Agent</strong> — 在你的服务器上运行；登录时可能在 Safari 中打开 Cursor 网站</li>
+      <li><strong>Claude Code</strong> — 在你的服务器上运行；登录时可能在 Safari 中打开 Anthropic 网站</li>
+      <li><strong>OpenAI Codex CLI</strong> — 在你的服务器上运行；设备码登录时可能在 Safari 中打开 OpenAI 网站</li>
+      <li><strong>Google Gemini CLI</strong> — 在你的服务器上运行；登录时可能在 Safari 中打开 Google 网站</li>
+    </ul>
+    <p>KoKo 不存储 Cursor、Anthropic、OpenAI 或 Google 的账号凭据。这些服务受其各自隐私政策约束。Agent CLI 发起的 API 请求与数据处理发生在你的服务器及对应服务商之间，与 KoKo 开发者无关。</p>
+    <p>若你选择安装缺失的 CLI，KoKo 可能<strong>在你的服务器上</strong>执行安装命令（例如官方安装脚本或 npm）。这可能导致服务器从 cursor.com、claude.ai、chatgpt.com、registry.npmjs.org 等第三方地址下载软件。</p>
+    <p>在登录或配置过程中，KoKo 可能应你的操作将 URL 或验证码复制到系统剪贴板，或在浏览器中打开登录页面。</p>
+
+    <h2>4. 会话同步与删除</h2>
+    <p>当你刷新会话列表时，KoKo 通过 SSH 在你的服务器上读取 Agent 元数据（例如 <code>~/.cursor</code>、<code>~/.claude</code>、<code>~/.codex</code>、<code>~/.gemini</code> 下的目录），并检测活跃的 GNU screen 会话。这些元数据会合并到 iPhone 上的本地会话记录中，<strong>不会</strong>发送给开发者。</p>
+    <p>在 App 中删除会话时，KoKo 会停止远端 Agent 或 screen 会话，并删除<strong>你服务器上</strong>的相关元数据，随后删除本机会话记录与 scrollback。服务器端删除可能不可恢复，请在需要时自行备份服务器上的重要数据。</p>
+
+    <h2>5. 公钥安装</h2>
+    <p>若使用 App 内公钥安装功能，KoKo 会以你现有的 SSH 凭据连接，将你的公钥写入服务器的 <code>~/.ssh/authorized_keys</code>，并可能（通过 sudo 使用你保存的 SSH 密码）尝试在 SSH 服务配置中启用公钥登录。公钥仅发送到你指定的服务器，不会发送给 KoKo 开发者。</p>
+
+    <h2>6. 数据共享</h2>
+    <p>我们不会出售、出租或向第三方共享你的 SSH 凭据、终端内容或本地配置。除非法律要求，否则不会披露你的数据。</p>
+
+    <h2>7. 数据保留与删除</h2>
+    <p>iPhone 上的数据会保留至你主动删除。你可在 App 中删除主机、密钥与会话；删除会话会同时清除对应的本地 scrollback。卸载 App 或在 iOS 设置中清除 App 数据，会移除本地配置、Keychain 条目与 scrollback 文件。</p>
+
+    <h2>8. 儿童隐私</h2>
+    <p>KoKo 不面向 13 岁以下儿童，我们不会故意收集儿童数据。</p>
+
+    <h2>9. 联系</h2>
+    <p>如有隐私问题，请通过 App Store 页面或本项目 GitHub 仓库中的支持渠道联系。</p>
+  </section>
+</body>
+</html>
